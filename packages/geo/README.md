@@ -1,21 +1,55 @@
-# @turnit/rent
+# @turnit/geo
 
-Convert between weekly rate and monthly rate
+Convert coordinates between `DMS` (degrees, minutes, seconds) and `DD` (decimal degrees).
 
-## Convert weekly to monthly rent
+## Convert DMS to DD
 
 ```ts
-import { rentPerMonth } from '@turnit/rent';
-const monthlyRate = rentPerMonth(300);
-// 1300
+import { convertDMStoLatLon } from '@turnit/geo';
+import type { LatitudeDMSType, LongitudeDMSType } from '@turnit/geo';
+
+const latitude: LatitudeDMSType = {
+  degrees: 52,
+  minutes: 23,
+  seconds: 16.0188,
+  northing: true,
+};
+const longitude: LongitudeDMSType = {
+  degrees: 9,
+  minutes: 44,
+  seconds: 0.3818,
+  easting: true,
+};
+
+const latlon = convertDMStoLatLon(latitude, longitude);
+// {
+//   lat: 52.387783,
+//   lon: 9.7334394,
+// };
 ```
 
-## Convert monthly to weekly rent
+## Convert DD to DMS
 
 ```ts
-import { rentPerWeek } from '@turnit/rent';
-const monthlyRate = rentPerWeek(1300);
-// 300
+import { convertLatLontoDMS } from '@turnit/geo';
+
+const { latitude, longitude } = convertLatLontoDMS({
+  lat: 52.387783,
+  lon: 9.7334394,
+});
+
+// latitude = {
+//   degrees: 52,
+//   minutes: 23,
+//   seconds: 16.0188,
+//   northing: true,
+// };
+// longitude = {
+//   degrees: 9,
+//   minutes: 44,
+//   seconds: 0.3818,
+//   easting: true,
+// };
 ```
 
 ## Licensing
