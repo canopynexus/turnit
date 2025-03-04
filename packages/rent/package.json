@@ -1,9 +1,36 @@
 {
   "name": "@turnit/rent",
   "version": "0.1.0",
+  "description": "Convert between weekly rate and monthly rate",
+  "keywords": [
+    "conversion",
+    "convert",
+    "rent",
+    "monthly",
+    "weekly"
+  ],
+  "author": {
+    "name": "Canopy Nexus Ltd",
+    "url": "https://canopynexus.com"
+  },
+  "homepage": "https://github.com/canopynexus/turnit#readme",
+  "bugs": {
+    "url": "https://github.com/canopynexus/turnit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canopynexus/turnit.git"
+  },
+  "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint": "eslint .",
     "build": "tsup src/index.ts --format cjs,esm --dts",
@@ -22,8 +49,5 @@
     "tsup": "^8.4.0",
     "typescript": "^5.7.3",
     "vitest": "^3.0.6"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

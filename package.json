@@ -1,9 +1,25 @@
 {
-  "name": "@turnit/source",
+  "name": "@turnit/sources",
   "version": "0.0.0",
-  "description": "",
+  "description": "TurnIt sources",
+  "author": {
+    "name": "Canopy Nexus Ltd",
+    "url": "https://canopynexus.com"
+  },
+  "homepage": "https://github.com/canopynexus/turnit#readme",
+  "bugs": {
+    "url": "https://github.com/canopynexus/turnit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canopynexus/turnit.git"
+  },
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -14,10 +30,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
-  "engines": {
-    "node": ">=22"
-  },
-  "packageManager": "pnpm@9.15.4",
   "devDependencies": {
     "prettier": "3.5.3",
     "turbo": "2.4.4",
