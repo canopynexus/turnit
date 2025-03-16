@@ -1,0 +1,53 @@
+{
+  "name": "@turnit/emoji-flags",
+  "version": "0.1.0",
+  "description": "Returns the emoji flags associated with an country code ISO_3166-1_alpha-2",
+  "keywords": [
+    "conversion",
+    "emoji",
+    "flags",
+    "ISO 3166-1",
+    "ISO 3166-1 alpha-2"
+  ],
+  "author": {
+    "name": "Canopy Nexus Ltd",
+    "url": "https://canopynexus.com"
+  },
+  "homepage": "https://github.com/canopynexus/turnit#readme",
+  "bugs": {
+    "url": "https://github.com/canopynexus/turnit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canopynexus/turnit.git"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.13.5",
+    "@vitest/coverage-v8": "^3.0.6",
+    "@vitest/ui": "^3.0.6",
+    "eslint": "^9.20.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.6"
+  }
+}
