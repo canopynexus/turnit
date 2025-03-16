@@ -1,6 +1,6 @@
 # @turnit/emoji-flags
 
-Returns the emoji flags associated with an country code [ISO_3166-1_alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+Returns the emoji flags associated with a country code [ISO_3166-1_alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
 ## Returns the emoji flag
 
